@@ -1,0 +1,37 @@
+@startuml kalkulator
+
+start
+
+:Masukkan angka pertama;
+:angka1 = Input;
+
+:Masukkan angka kedua;
+:angka2 = Input;
+
+:Menu:
+- 1. Penjumlahan
+- 2. Pengurangan
+- 3. Perkalian
+- 4. Pembagian;
+: Pilih menu;
+:menu = Input;
+
+if (menu == 1) then (true)
+    :jumlah = angka1 + angka2;
+    :Penjumlahan: angka1 + angka2 = jumlah;
+elseif (menu == 2) then (true)
+    :kurang = angka1 - angka2;
+    :Pengurangan: angka1 - angka2 = kurang;
+elseif (menu == 3) then (true)
+    :kali = angka1 * angka2;
+    :Perkalian: angka1 * angka2 = kali;
+elseif (menu == 4) then (true)
+    :bagi = angka1 / angka2;
+    :Pembagian: angka1 / angka2 = bagi;
+else (false)
+    :Pilihan tidak valid;
+endif
+
+stop
+
+@enduml
