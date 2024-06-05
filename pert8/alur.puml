@@ -1,0 +1,52 @@
+@startuml
+!define RECTANGLE class
+
+title Alur Operasional SmallCafe
+
+start
+
+:Pelayanan Pelanggan;
+-> Pelanggan Masuk;
+if (Apakah pelanggan baru?) then (ya)
+  :Sambutan dan Pemberitahuan Menu Khusus;
+else (tidak)
+  :Sambutan dan Menunjukkan Tempat Duduk yang Tersedia;
+endif
+
+:Memberikan Menu;
+-> Pelanggan Memilih Pesanan;
+:Pelayanan Mencatat Pesanan;
+-> Apakah Dine-in atau Takeaway?;
+if (Dine-in) then (Dine-in)
+  :Memberikan Nomor Meja;
+  :Pesanan Dikirim ke Barista/Dapur;
+  :Persiapan Pesanan;
+  :Pengantaran Pesanan ke Meja;
+else (Takeaway)
+  :Pesanan Dikirim ke Barista/Dapur;
+  :Persiapan Pesanan;
+  :Pesanan Diberikan ke Pelanggan;
+endif
+
+:Menanyakan Kepuasan Pelanggan;
+if (Pelanggan Puas?) then (ya)
+  :Mengucapkan Terima Kasih;
+  :Memberikan Program Loyalitas (jika ada);
+else (tidak)
+  :Menangani Keluhan Pelanggan;
+  :Memberikan Solusi atau Kompensasi;
+endif
+
+:Melakukan Pembayaran;
+if (Pembayaran dengan Tunai/Kartu) then (Tunai/Kartu)
+  :Proses Pembayaran;
+  :Memberikan Struk dan Kembalian (jika perlu);
+else (Aplikasi Mobile)
+  :Proses Pembayaran melalui Aplikasi;
+  :Konfirmasi Pembayaran Sukses;
+endif
+
+:Pelanggan Meninggalkan Kafe;
+stop
+
+@enduml
