@@ -1,0 +1,12 @@
+pert9/db/mariadb/*
+pert9/db/postgres/*
+pert9/db/mongo/*
+pert9/db/redis/*
+
+pert10/db/data/*
+pert10/src/*
+
+pert12/db/data/*
+pert12/src/*
+
+
