@@ -1,0 +1,2 @@
+### GUI (Graphical User Interface)
+adalah antarmuka pengguna yang memungkinkan interaksi dengan perangkat lunak melalui elemen-elemen grafis seperti tombol, ikon, jendela, dan menu. GUI memudahkan pengguna untuk mengoperasikan perangkat lunak tanpa harus mengetik perintah teks, sehingga lebih user-friendly dibandingkan dengan CLI (Command Line Interface).
